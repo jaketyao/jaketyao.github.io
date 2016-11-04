@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>姚不可及</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.yyspace.cn/"/>
+  <updated>2016-11-04T07:25:03.000Z</updated>
+  <id>http://www.yyspace.cn/</id>
+  
+  <author>
+    <name>姚杰</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jvm参数详解之一</title>
+    <link href="http://www.yyspace.cn/2016/11/04/jvm%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/"/>
+    <id>http://www.yyspace.cn/2016/11/04/jvm参数详解之一/</id>
+    <published>2016-11-04T05:48:49.000Z</published>
+    <updated>2016-11-04T07:25:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参数名"><a href="#参数名" class="headerlink" title="参数名"></a>参数名</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">println()</div></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote>
+<p><a href="http://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html" target="_blank" rel="external">Java HotSpot VM Options jkd &lt;8 </a><br>那些老外大能博客<br><a href="http://java-performance.info/" target="_blank" rel="external">http://java-performance.info/</a><br><a href="http://blog.sokolenko.me/2014/11/javavm-options-production.html" target="_blank" rel="external">http://blog.sokolenko.me/2014/11/javavm-options-production.html</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;参数名&quot;&gt;&lt;a href=&quot;#参数名&quot; class=&quot;headerlink&quot; title=&quot;参数名&quot;&gt;&lt;/a&gt;参数名&lt;/h1&gt;&lt;h2 id=&quot;这是-H2&quot;&gt;&lt;a href=&quot;#这是-H2&quot; class=&quot;headerlink&quot; title=&quot;这是 H2&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="jvm参数" scheme="http://www.yyspace.cn/tags/jvm%E5%8F%82%E6%95%B0/"/>
+    
+  </entry>
+  
+</feed>
