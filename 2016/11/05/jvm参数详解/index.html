@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>姚不可及</title>
-  
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="http://www.yyspace.cn/"/>
-  <updated>2016-11-05T03:41:14.000Z</updated>
-  <id>http://www.yyspace.cn/</id>
-  
-  <author>
-    <name>姚杰</name>
-    
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>jvm参数详解</title>
-    <link href="http://www.yyspace.cn/2016/11/05/jvm%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.yyspace.cn/2016/11/05/jvm参数详解/</id>
-    <published>2016-11-05T03:04:12.000Z</published>
-    <updated>2016-11-05T03:41:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="jvm-options-配置"><a href="#jvm-options-配置" class="headerlink" title="jvm options 配置"></a>jvm options 配置</h1><ul>
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="不知道，乱写一气"><title>jvm参数详解 | 姚不可及</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">jvm参数详解</h1><a id="logo" href="/.">姚不可及</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">jvm参数详解</h1><div class="post-meta">Nov 5, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h1 id="jvm-options-配置"><a href="#jvm-options-配置" class="headerlink" title="jvm options 配置"></a>jvm options 配置</h1><ul>
 <li>实例</li>
 </ul>
 <figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=/home/app/JDK1.8</div><div class="line">APP_HOME=/home/app/acc</div><div class="line">APP_CLASSPATH=$APP_HOME/classes</div><div class="line">APP_CLASSPATH=$APP_CLASSPATH:` find $APP_HOME/lib -name *.jar|tr '\n' ':'`</div><div class="line">export JAVA_HOME APP_HOME APP_CLASSPATH</div><div class="line">CURRENT_DATE=`date +%Y%m%d%H%M%S`</div><div class="line">$JAVA_HOME/bin/java -noverify</div><div class="line">-<span class="ruby">server -Xmx1024M -Xms1024M -Xmn512M</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>SurvivorRatio=<span class="number">2</span></span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>PermSize=<span class="number">256</span>M</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>MaxPermSize=<span class="number">256</span>M</span></div><div class="line">-<span class="ruby">Xss256K</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+ExplicitGCInvokesConcurrent</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseCMSInitiatingOccupancyOnly</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseConcMarkSweepGC</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseParNewGC</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+CMSParallelRemarkEnabled</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseCMSCompactAtFullCollection</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>CMSFullGCsBeforeCompaction=<span class="number">0</span></span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+CMSClassUnloadingEnabled</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>LargePageSizeInBytes=<span class="number">128</span>M</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseFastAccessorMethods</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>CMSInitiatingOccupancyFraction=<span class="number">70</span></span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>SoftRefLRUPolicyMSPerMB=<span class="number">0</span></span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+PrintClassHistogram</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+PrintGCDetails</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+PrintGCTimeStamps</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+PrintHeapAtGC</span></div><div class="line">-<span class="ruby"><span class="symbol">Xloggc:</span>$APP_HOME/logs/gc<span class="number">_</span>$CURRENT_DATE.log</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+HeapDumpOnOutOfMemoryError</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>HeapDumpPath=$APP_HOME/dump/</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>OnOutOfMemoryError=$APP_HOME/shell/restart.sh -jar $APP_HOME/classes/acc.war</span></div><div class="line"> -<span class="ruby">-logging.config=$APP_HOME/config/logback.xml &gt;$APP_HOME/logs/startup<span class="number">_</span>$CURRENT_DATE.log <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span></div></pre></td></tr></table></figure>
@@ -32,131 +8,11 @@
 <p><a href="http://blog.sokolenko.me/2014/11/javavm-options-production.html" target="_blank" rel="external">http://blog.sokolenko.me/2014/11/javavm-options-production.html</a></p>
 <p><a href="http://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html" target="_blank" rel="external">http://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html</a></p>
 </blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;jvm-options-配置&quot;&gt;&lt;a href=&quot;#jvm-options-配置&quot; class=&quot;headerlink&quot; title=&quot;jvm options 配置&quot;&gt;&lt;/a&gt;jvm options 配置&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;实例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;f
-    
-    </summary>
-    
-    
-      <category term="jvm" scheme="http://www.yyspace.cn/tags/jvm/"/>
-    
-      <category term="博客" scheme="http://www.yyspace.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="http://www.yyspace.cn/2016/11/04/Markdown%E8%AF%AD%E6%B3%95/index/"/>
-    <id>http://www.yyspace.cn/2016/11/04/Markdown语法/index/</id>
-    <published>2016-11-04T14:02:30.000Z</published>
-    <updated>2016-11-05T03:40:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>＃Markdown 基本常用语法</p>
-<p>一级标题              ＃一级标题</p>
-<p>二级标题           ＃二级标题</p>
-<p>加粗                  <strong>加粗</strong></p>
-<p>文字链接             ［文字](链接）</p>
-<p>文本内跳转         ［<strong>文字加粗</strong>](#链接)</p>
-<p>注释                 ［^emphasize］</p>
-<p>斜体                  command+|</p>
-<p>文字加框              <code>文字加框</code></p>
-<p>加入邮箱地址          <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#x61;&#x62;&#x63;&#x2e;&#99;&#111;&#109;">&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#x61;&#x62;&#x63;&#x2e;&#99;&#111;&#109;</a></p>
-<p>列表                  *加空格 或者- </p>
-<ul>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3</li>
-</ul>
-<ul>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3  </li>
-</ul>
-<p>有层级的竖线           &gt;</p>
-<blockquote>
-<p>1<br>3<br>4<br>5<br>6<br>7<br>9</p>
-</blockquote>
-<p>斜体                  <em>斜体</em></p>
-<p>删除线              <del>删除线</del> </p>
-<p>最高阶标题 “==============”</p>
-<h1 id="A-First-Level-Header"><a href="#A-First-Level-Header" class="headerlink" title="A First Level Header"></a>A First Level Header</h1><p>第二阶标题          ————</p>
-<h2 id="A-Second-Level-Header"><a href="#A-Second-Level-Header" class="headerlink" title="A Second Level Header"></a>A Second Level Header</h2><p>分隔线              三个以上的<strong><em> 或者—  (</em></strong>,—) </p>
-<p>表格</p>
-<table>
-<thead>
-<tr>
-<th>dog</th>
-<th>bird</th>
-<th>cat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>foo</td>
-<td>foo</td>
-<td>foo</td>
-</tr>
-<tr>
-<td>bar</td>
-<td>bar</td>
-<td>bar</td>
-</tr>
-<tr>
-<td>baz</td>
-<td>baz</td>
-<td>baz</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<h1 id="Markdown-官方文档"><a href="#Markdown-官方文档" class="headerlink" title="Markdown 官方文档"></a>Markdown 官方文档</h1><ul>
-<li><a href="http://daringfireball.net/projects/markdown/basics" target="_blank" rel="external">创始人 John Gruber 的 Markdown 语法说明</a></li>
-<li><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">Markdown 中文版语法说明</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      Markdown 基本常用语法
-    
-    </summary>
-    
-      <category term="博客" scheme="http://www.yyspace.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="博客" scheme="http://www.yyspace.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-</feed>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.yyspace.cn/2016/11/05/jvm参数详解/" data-id="civ4nwsu600005kya5pxvaupk" class="article-share-link">分享到</a><div class="tags"><a href="/tags/jvm/">jvm</a><a href="/tags/博客/">博客</a></div><div class="post-nav"><a href="/2016/11/04/Markdown语法/index/" class="next">Markdown语法</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://www.yyspace.cn"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/jvm/" style="font-size: 15px;">jvm</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/05/jvm参数详解/">jvm参数详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Markdown语法/index/">Markdown语法</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">姚不可及.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f8e461e3429acde067b399f6743f575d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
