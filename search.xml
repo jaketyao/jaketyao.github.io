@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[Markdown语法]]></title>
       <url>%2F2016%2F11%2F04%2FMarkdown%E8%AF%AD%E6%B3%95%2Findex%2F</url>
-      <content type="text"><![CDATA[＃Markdown 基本常用语法 一级标题 ＃一级标题 二级标题 ＃二级标题 加粗 加粗 文字链接 ［文字](链接） 文本内跳转 ［文字加粗](#链接) 注释 ［^emphasize］ 斜体 command+| 文字加框 文字加框 加入邮箱地址 &#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#x61;&#x62;&#x63;&#x2e;&#99;&#111;&#109; 列表 *加空格 或者- 列表1 列表2 列表3 列表1 列表2 列表3 有层级的竖线 &gt; 1345679 斜体 斜体 删除线 删除线 最高阶标题 “==============” A First Level Header第二阶标题 ———— A Second Level Header分隔线 三个以上的 或者— (,—) 表格 dog bird cat foo foo foo bar bar bar baz baz baz Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 Markdown 官方文档 创始人 John Gruber 的 Markdown 语法说明 Markdown 中文版语法说明]]></content>
+      <content type="text"><![CDATA[＃Markdown 基本常用语法 一级标题 ＃一级标题 二级标题 ＃二级标题 加粗 加粗 文字链接 ［文字](链接） 文本内跳转 ［文字加粗](#链接) 注释 ［^emphasize］ 斜体 command+| 文字加框 文字加框 加入邮箱地址 &#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#97;&#x62;&#x63;&#x2e;&#99;&#111;&#x6d; 列表 *加空格 或者- 列表1 列表2 列表3 列表1 列表2 列表3 有层级的竖线 &gt; 1345679 斜体 斜体 删除线 删除线 最高阶标题 “==============” A First Level Header第二阶标题 ———— A Second Level Header分隔线 三个以上的 或者— (,—) 表格 dog bird cat foo foo foo bar bar bar baz baz baz Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 Markdown 官方文档 创始人 John Gruber 的 Markdown 语法说明 Markdown 中文版语法说明]]></content>
     </entry>
 
     
