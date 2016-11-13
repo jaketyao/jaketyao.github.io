@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[JVM参数查看及命令行工具]]></title>
+      <url>%2F2016%2F11%2F13%2FJVM%E5%8F%82%E6%95%B0%E6%9F%A5%E7%9C%8B%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%2F</url>
+      <content type="text"><![CDATA[查看JVM各个参数的值及命令行工具 1.HotSpot vm中的各个globals.hpp文件 查看jvm初始的默认值及参数 2.-XX:+PrintFlagsInitial参数 显示所有可设置参数及默认值，可结合-XX:+PrintFlagsInitial与-XX:+PrintFlagsFinal对比设置前、设置后的差异，方便知道对那些参数做了调整 3.-XX:+PrintFlagsFinal参数可以获取到所有可设置参数及值(手动设置之后的值)，这个参数只能使用在Jdk6 update 21以上版本(包括该版本)-XX:+PrintFlagsFinal参数的使用 与上面-XX:+PrintFlagsInitial 参数使用相同 Java -XX:+PrintFlagsFinal 4.使用 jinfo 命令 查看或设置某个参数的值jinfo命令格式： jinfo [option] pid虚拟机进程id 可以通过 jps命令查看 5.-XX:+PrintCommandLineFlags参数显示出JVM初始化完毕后所有跟最初的默认值不同的参数及它们的值。 参考&gt;http://hg.openjdk.java.net/]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[jvm参数详解]]></title>
       <url>%2F2016%2F11%2F05%2Fjvm%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3%2F</url>
       <content type="text"><![CDATA[jvm options 配置 实例 123456789101112131415161718192021222324252627282930313233JAVA_HOME=/home/app/JDK1.8APP_HOME=/home/app/accAPP_CLASSPATH=$APP_HOME/classesAPP_CLASSPATH=$APP_CLASSPATH:` find $APP_HOME/lib -name *.jar|tr '\n' ':'`export JAVA_HOME APP_HOME APP_CLASSPATHCURRENT_DATE=`date +%Y%m%d%H%M%S`$JAVA_HOME/bin/java -noverify-server -Xmx1024M -Xms1024M -Xmn512M-XX:SurvivorRatio=2-XX:PermSize=256M-XX:MaxPermSize=256M-Xss256K-XX:+ExplicitGCInvokesConcurrent-XX:+UseCMSInitiatingOccupancyOnly-XX:+UseConcMarkSweepGC-XX:+UseParNewGC-XX:+CMSParallelRemarkEnabled-XX:+UseCMSCompactAtFullCollection-XX:CMSFullGCsBeforeCompaction=0-XX:+CMSClassUnloadingEnabled-XX:LargePageSizeInBytes=128M-XX:+UseFastAccessorMethods-XX:CMSInitiatingOccupancyFraction=70-XX:SoftRefLRUPolicyMSPerMB=0-XX:+PrintClassHistogram-XX:+PrintGCDetails-XX:+PrintGCTimeStamps-XX:+PrintHeapAtGC-Xloggc:$APP_HOME/logs/gc_$CURRENT_DATE.log-XX:+HeapDumpOnOutOfMemoryError-XX:HeapDumpPath=$APP_HOME/dump/-XX:OnOutOfMemoryError=$APP_HOME/shell/restart.sh -jar $APP_HOME/classes/acc.war --logging.config=$APP_HOME/config/logback.xml &gt;$APP_HOME/logs/startup_$CURRENT_DATE.log 2&gt;&amp;1 &amp; 参考收集 Java HotSpot VM Options官方 http://java-performance.info/ http://blog.sokolenko.me/2014/11/javavm-options-production.html http://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html]]></content>
@@ -12,7 +19,7 @@
     <entry>
       <title><![CDATA[Markdown语法]]></title>
       <url>%2F2016%2F11%2F04%2FMarkdown%E8%AF%AD%E6%B3%95%2Findex%2F</url>
-      <content type="text"><![CDATA[＃Markdown 基本常用语法 一级标题 ＃一级标题 二级标题 ＃二级标题 加粗 加粗 文字链接 ［文字](链接） 文本内跳转 ［文字加粗](#链接) 注释 ［^emphasize］ 斜体 command+| 文字加框 文字加框 加入邮箱地址 &#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#97;&#x62;&#x63;&#x2e;&#99;&#111;&#x6d; 列表 *加空格 或者- 列表1 列表2 列表3 列表1 列表2 列表3 有层级的竖线 &gt; 1345679 斜体 斜体 删除线 删除线 最高阶标题 “==============” A First Level Header第二阶标题 ———— A Second Level Header分隔线 三个以上的 或者— (,—) 表格 dog bird cat foo foo foo bar bar bar baz baz baz Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 Markdown 官方文档 创始人 John Gruber 的 Markdown 语法说明 Markdown 中文版语法说明]]></content>
+      <content type="text"><![CDATA[＃Markdown 基本常用语法 一级标题 ＃一级标题 二级标题 ＃二级标题 加粗 加粗 文字链接 ［文字](链接） 文本内跳转 ［文字加粗](#链接) 注释 ［^emphasize］ 斜体 command+| 文字加框 文字加框 加入邮箱地址 &#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x40;&#97;&#x62;&#99;&#x2e;&#x63;&#111;&#x6d; 列表 *加空格 或者- 列表1 列表2 列表3 列表1 列表2 列表3 有层级的竖线 &gt; 1345679 斜体 斜体 删除线 删除线 最高阶标题 “==============” A First Level Header第二阶标题 ———— A Second Level Header分隔线 三个以上的 或者— (,—) 表格 dog bird cat foo foo foo bar bar bar baz baz baz Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 Markdown 官方文档 创始人 John Gruber 的 Markdown 语法说明 Markdown 中文版语法说明]]></content>
     </entry>
 
     
